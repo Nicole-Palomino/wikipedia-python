@@ -1,9 +1,7 @@
 import wikipedia
 
-#Idioma de búsqueda
 wikipedia.set_lang("es")
 
-#Aqui pones las palabras de tu tarea
 vocabulario = [
     'memoria ROM',
   	'Lionel Messi',
@@ -14,7 +12,7 @@ parrafos = 1
 
 tarea = open("tarea.txt", "w+", encoding='utf-8')
 
-print("Buscando tu fkn Tarea, No molestar...")
+print("Buscando ...")
 
 for i in range(len(vocabulario)):
     
@@ -30,9 +28,8 @@ for i in range(len(vocabulario)):
     else:
 
         #Si no se encuentra la palabra...
-        tarea.write(vocabulario[i] + ": No se ha encontrado ninguna palabra, Posiblemente por mala escritura. Me descepcionas bro...\n\n")
+        tarea.write(vocabulario[i] + ": No se ha encontrado ninguna palabra, Posiblemente por mala escritura.\n\n")
 
 else:
-    #Cerramos el documento y brr!
     tarea.close()
-    print("Tamos Ready Brr!")
+    print("Bye!")
